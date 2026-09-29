@@ -143,6 +143,11 @@ input:focus {
   opacity: 0.9;
 }
 
+.reset-btn {
+  background-color: #ef4444;
+  margin-top: 10px;
+}
+
 .list {
   list-style-type: none;
   padding: 0;

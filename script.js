@@ -5,6 +5,7 @@ const list = document.getElementById('list');
 const form = document.getElementById('form');
 const text = document.getElementById('text');
 const amount = document.getElementById('amount');
+const resetBtn = document.getElementById('reset-btn');
 
 // Check local storage for existing transactions
 const localStorageTransactions = JSON.parse(
@@ -111,3 +112,12 @@ function init() {
 init();
 
 form.addEventListener('submit', addTransaction);
+
+// Reset all data
+resetBtn.addEventListener('click', () => {
+  if (confirm('Are you sure you want to delete all transactions?')) {
+    transactions = [];
+    updateLocalStorage();
+    init();
+  }
+});
